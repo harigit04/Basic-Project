@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --primary: #DE6E4B;
+    --secondary: #ede6e3;
+    --tertiary: #171123;
+}
+
+body {
+    scroll-behavior: smooth;
+    background: #171123;
+}
+
+header {
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    outline: 2px solid var(--primary);
+    outline-offset: -1rem;
+    cursor: pointer;
+
+
+    & nav {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--secondary);
+
+        & ul {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5rem;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+        }
+    }
+}
+
+/* styling of Home1 content starts here  */
+
+.Home1 {
+    height: 90vh;
+    max-width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: var(--secondary);
+    padding: 2rem;
+
+    & .introduction{
+        height: 100%;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        & .text{
+            width: 55%;
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: left;
+            gap: 1rem;
+            animation: float .6s linear alternate infinite;
+
+            & :nth-child(1){
+                font-size: 2rem;
+                color: var(--primary);
+                letter-spacing: .1rem;
+            }
+
+            & :nth-child(2){
+                font-size: 3rem;
+                letter-spacing: 0.1rem;
+            }
+
+            & :nth-child(3){
+                font-size: 1.3rem;
+                letter-spacing: .1rem;
+            }
+        }
+    }
+
+    & .photo{
+        height: 100%;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & .image{
+            height: 60%;
+            width: 100%;
+            outline: 2px solid green;
+            
+        }
+    }
+
+}
+
+@keyframes float {
+    to{transform: translateY(-5px);}
+    from{transform: translateY(0);}
+}
